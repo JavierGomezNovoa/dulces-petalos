@@ -12,22 +12,27 @@ export default function ProductDetails({ productData }) {
       </div>
 
       <section className={styles.section}>
-        <Image
-          src={productData.imgUrl}
-          alt={productData.name}
-          width={400}
-          height={400}
-        />
+        <div className={styles.image}>
+          <Image
+            src={productData.imgUrl}
+            alt={productData.name}
+            width={400}
+            height={400}
+          />
+        </div>
         <div className={styles.description}>
           <h1>Desription</h1>
-          <h2>Name: {productData.name}</h2>
-          <h2>Scientific name: {productData.binomialName}</h2>
-          <h2>Price: {productData.price}€</h2>
-          <h2>
-            Water needs: {productData.wateringsPerWeek} watering(s) per week
-          </h2>
-          <h2>Fertilizer type: {productData.fertilizerType}</h2>
-          <h2>Maximun height: {productData.heightInCm} cm</h2>
+          <ul>
+            <li>Name: {productData.name}</li>
+
+            <li>Scientific name: {productData.binomialName}</li>
+            <li>Price: {productData.price}€</li>
+            <li>
+              Water needs: {productData.wateringsPerWeek} watering(s) per week
+            </li>
+            <li>Fertilizer type: {productData.fertilizerType}</li>
+            <li>Maximun height: {productData.heightInCm} cm</li>
+          </ul>
         </div>
       </section>
     </>

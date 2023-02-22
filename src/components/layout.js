@@ -14,7 +14,7 @@ export default function Layout({ children }) {
         <header className={styles.header}>
           <h1 className={styles.headerText}>Dulces Pétalos</h1>
         </header>
-        <div>{children}</div>
+        {children}
         <footer className={styles.footer}>
           <p className={styles.footerText}>Copyright ©</p>
         </footer>
