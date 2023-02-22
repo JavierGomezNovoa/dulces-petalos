@@ -5,16 +5,18 @@ import styles from "@/styles/Home.module.css";
 export default function ProductDetails({ productData }) {
   return (
     <>
-      <Link href="/">
-        <button>Back to home</button>
-      </Link>
+      <div className={styles.backButton}>
+        <Link href="/">
+          <button>Back to home</button>
+        </Link>
+      </div>
+
       <section className={styles.section}>
-        <br />
         <Image
           src={productData.imgUrl}
           alt={productData.name}
-          width={500}
-          height={500}
+          width={400}
+          height={400}
         />
         <div className={styles.description}>
           <h1>Desription</h1>

@@ -1,5 +1,5 @@
 import { getProductById, getAllProducts } from "@/lib/products.mjs";
-import Layout from "@/components/Layout";
+import Layout from "@/components/layout";
 import ProductDetails from "@/components/productDetails";
 
 export async function getStaticPaths() {
