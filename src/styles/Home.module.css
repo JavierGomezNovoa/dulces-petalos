@@ -34,17 +34,31 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 5rem;
   height: 100%;
   width: 100%;
   border: 1px solid blue;
-  margin: 5rem 0 5rem 0;
+  margin: 5rem auto 5rem auto;
+  max-width: 1300px
 }
 
 .item {
   height: 233px;
   width: 233px;
+  border: 1px solid black;
+
+}
+
+.searchBar {
+  margin-top: 1rem;
+  float: right;
+  margin-right: 1rem;
+}
+
+.description {
+  width: 500px;
+  height: 500px;
   border: 1px solid black;
 
 }

@@ -7,8 +7,8 @@ export default function ProductList({ allProducts }) {
     <section className={styles.section}>
       {allProducts.map(({ id, name, price, imgUrl }) => (
         <div className={styles.item} key={id}>
-          <Link href={`/pages/${id}`}>
-            <Image src={imgUrl} alt={name} width={200} height={200} />
+          <Link href={`/${id}`}>
+            <Image src={imgUrl} alt={name} width={233} height={233} />
           </Link>
           <p>
             {name}, {price}$
