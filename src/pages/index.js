@@ -20,7 +20,12 @@ export default function Home({ allProducts }) {
   const handleChange = (e) => {
     setProducts(
       allProducts.filter((product) => {
-        if (product.name.toLowerCase().includes(e.target.value.toLowerCase())) {
+        if (
+          product.name.toLowerCase().includes(e.target.value.toLowerCase()) ||
+          product.binomialName
+            .toLowerCase()
+            .includes(e.target.value.toLowerCase())
+        ) {
           return product;
         }
       })

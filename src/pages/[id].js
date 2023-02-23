@@ -22,7 +22,7 @@ export async function getStaticProps({ params }) {
   };
 }
 
-export default function Details({ productData }) {
+export default function ProductDetailsPage({ productData }) {
   return (
     <Layout>
       <ProductDetails productData={productData}></ProductDetails>

@@ -1,35 +1,50 @@
 .main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+
   align-items: center;
   min-height: 100vh;
-  border: 2px solid black;
+  display: grid;
+  grid-auto-rows: auto 1fr auto;
 }
 
 .header {
-  display: flex;
   width: 100%;
   height: 5rem;
-  align-items: center;
-  border: 1px solid black;
   background-color: rgb(255, 85, 85)
 }
 
+.headerContent {
+  display: flex;
+  flex-direction: row;
+  width: 20rem;
+  height: 5rem;
+  text-decoration: none;
+}
+
 .headerText {
-  margin-left: 2rem;
+  color: black;
+}
+
+.logo {
+  margin: 1.4rem 2rem
 }
 
 .footer {
   width: 100%;
   height: 3rem;
-  border: 1px solid black;
   background-color: rgb(255, 85, 85)
 }
 
 .footerText {
   width: 100%;
   text-align: center;
+}
+
+.childrenContainer {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto 0 auto;
+  background-color: rgb(185, 255, 185);
+
 }
 
 .section {
@@ -40,6 +55,7 @@
   gap: 5rem;
   margin: 3rem auto 5rem auto;
   max-width: 1300px;
+  padding-bottom: 5rem;
 }
 
 
@@ -89,16 +105,55 @@
 }
 
 .searchBar {
-  width: 100%;
-  height: 100%;
-  justify-content: flex-end;
-  margin-top: 2rem;
-  margin-right: 5rem;
+  max-width: 1300px;
+  margin: 0 auto 0 auto;
+  padding-right: 2rem;
+
 }
 
 .searchBar>input {
-  width: 7rem;
-  margin-left: 80%
+  display: block;
+  width: 233px;
+  height: 2rem;
+  margin-left: auto;
+  margin-right: 0;
+  margin-top: 2rem;
+  background-color: rgb(95, 167, 255);
+  text-align: center;
+  font-size: large;
+}
+
+
+
+.backButton {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: 0;
+  padding-right: 13rem;
+}
+
+.backButton>a {
+  text-decoration: none;
+
+}
+
+.backButton>a>button {
+  display: block;
+  width: 200px;
+  height: 2rem;
+  margin-left: auto;
+  margin-right: 0;
+  margin-top: 2rem;
+  background-color: orangered;
+  text-align: center;
+  font-size: large;
+}
+
+.detailPageWrapper {
+  margin: 4rem auto 0 auto;
+  max-width: 1300px;
+  height: 100%;
+
 }
 
 .image {
@@ -133,14 +188,4 @@
 .description:hover,
 .image:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.7);
-}
-
-.main {
-  background-color: rgb(110, 248, 110, 0.2);
-}
-
-.backButton {
-  margin-right: 6rem;
-  float: right;
-  margin-top: 1rem;
 }

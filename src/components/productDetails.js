@@ -4,7 +4,7 @@ import styles from "@/styles/Home.module.css";
 
 export default function ProductDetails({ productData }) {
   return (
-    <>
+    <div className={styles.detailPageWrapper}>
       <div className={styles.backButton}>
         <Link href="/">
           <button>Back to home</button>
@@ -35,6 +35,6 @@ export default function ProductDetails({ productData }) {
           </ul>
         </div>
       </section>
-    </>
+    </div>
   );
 }

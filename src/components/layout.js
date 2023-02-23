@@ -1,4 +1,6 @@
 import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
 import styles from "@/styles/Home.module.css";
 
 export default function Layout({ children }) {
@@ -12,9 +14,17 @@ export default function Layout({ children }) {
       </Head>
       <main className={styles.main}>
         <header className={styles.header}>
-          <h1 className={styles.headerText}>Dulces Pétalos</h1>
+          <Link className={styles.headerContent} href="/">
+            <Image
+              className={styles.logo}
+              src="/logo.png"
+              width={40}
+              height={40}
+            />
+            <h1 className={styles.headerText}>Dulces Pétalos</h1>
+          </Link>
         </header>
-        {children}
+        <div className={styles.childrenContainer}>{children}</div>
         <footer className={styles.footer}>
           <p className={styles.footerText}>Copyright ©</p>
         </footer>
