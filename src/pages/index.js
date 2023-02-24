@@ -35,8 +35,14 @@ export default function Home({ allProducts }) {
   return (
     <>
       <Layout>
-        <SearchBar handleChange={handleChange}></SearchBar>
-        <ProductList allProducts={products}></ProductList>
+        <SearchBar
+          data-testid={"searchBar"}
+          handleChange={handleChange}
+        ></SearchBar>
+        <ProductList
+          data-testid={"productList"}
+          allProducts={products}
+        ></ProductList>
       </Layout>
     </>
   );

@@ -12,7 +12,7 @@ export default function Layout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
+      <main data-testid="layout" className={styles.main}>
         <header className={styles.header}>
           <Link className={styles.headerContent} href="/">
             <Image
@@ -20,6 +20,7 @@ export default function Layout({ children }) {
               src="/logo.png"
               width={40}
               height={40}
+              alt="logo"
             />
             <h1 className={styles.headerText}>Dulces Pétalos</h1>
           </Link>

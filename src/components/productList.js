@@ -4,10 +4,15 @@ import Image from "next/image";
 
 export default function ProductList({ allProducts }) {
   return (
-    <section className={styles.section}>
+    <section data-testid="productList" className={styles.section}>
       {allProducts.map(({ id, name, binomialName, price, imgUrl }) => (
-        <div className={styles.item} key={id}>
-          <Link className={styles.link} href={`/${id}`}>
+        <div data-testid={`listItem${id}`} className={styles.item} key={id}>
+          <Link
+            data-testid={`link${id}`}
+            className={styles.link}
+            href={`/${id}`}
+            as={`/${id}`}
+          >
             <Image src={imgUrl} alt={name} width={233} height={233} />
             <div className={styles.itemInfo}>
               <div className={styles.name}>{name}</div>
@@ -20,5 +25,3 @@ export default function ProductList({ allProducts }) {
     </section>
   );
 }
-
-//make a search bar component that filters all products based on the input
