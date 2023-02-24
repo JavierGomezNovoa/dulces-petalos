@@ -6,7 +6,7 @@ export default function ProductDetails({ productData }) {
   return (
     <div className={styles.detailPageWrapper}>
       <div className={styles.backButton}>
-        <Link href="/">
+        <Link data-testid={"backButtonLink"} href="/">
           <button>Back to home</button>
         </Link>
       </div>
